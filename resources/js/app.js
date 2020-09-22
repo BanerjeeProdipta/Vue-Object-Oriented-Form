@@ -70,8 +70,8 @@ const app = new Vue({
         onSuccess(data) {
             alert(data.message); // temporary
 
-            this.name = '';
-            this.description = '';;
+            this.name = ''
+            this.description = '';
         }
 
     }

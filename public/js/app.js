@@ -49808,7 +49808,6 @@ var app = new Vue({
 
       this.name = '';
       this.description = '';
-      ;
     }
   }
 });
