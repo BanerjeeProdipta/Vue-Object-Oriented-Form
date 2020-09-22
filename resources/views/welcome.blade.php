@@ -15,8 +15,9 @@
                 <div class="field">
                     <label class="label">Project Name</label>
                     <div class="control">
-                      <input id="name" class="input" type="text" v-model="name" placeholder="" @keydown="errors.clear('name')">
-                      <span class="help is-danger" v-text="errors.get('name')"></span>
+                      <input id="name" class="input" type="text" v-model="name" placeholder=""  @keydown="errors.clear('name')">
+                      <span class="help is-danger" v-if="errors.has('name')" v-text="errors.get('name')"></span>
+
                     </div>
                   </div>
                   
@@ -24,12 +25,11 @@
                     <label class="label">Description</label>
                     <div class="control">
                       <input id="description" class="input" type="text" v-model="description" placeholder="" @keydown="errors.clear('description')">
-                      <span class="help is-danger" v-text="errors.get('description')"></span>
-
+                      <span class="help is-danger" v-if="errors.has('description')" v-text="errors.get('description')"></span>
                     </div>
                   </div>
                   <div class="control">
-                      <button class="button is-primary">Create</button>
+                      <button class="button is-primary" :disabled="errors.any()">Create</button>
                   </div>
             </form>
         </div>

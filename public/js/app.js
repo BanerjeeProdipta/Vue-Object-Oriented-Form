@@ -49773,6 +49773,16 @@ var Errors = /*#__PURE__*/function () {
     value: function clear(field) {
       delete this.errors[field];
     }
+  }, {
+    key: "has",
+    value: function has(field) {
+      return this.errors.hasOwnProperty(field);
+    }
+  }, {
+    key: "any",
+    value: function any() {
+      return Object.keys(this.errors).length > 0;
+    }
   }]);
 
   return Errors;
