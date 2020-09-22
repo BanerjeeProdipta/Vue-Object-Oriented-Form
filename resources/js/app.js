@@ -71,7 +71,7 @@ const app = new Vue({
             alert(data.message); // temporary
 
             this.name = '';
-            this.description = '';
+            this.description = '';;
         }
 
     }
