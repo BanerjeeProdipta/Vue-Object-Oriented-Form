@@ -11,8 +11,8 @@
     </head>
     <body class="antialiased">
         <div class="box" id="app">
-            <form method="POST" action="projects" @submit.prevent="onSubmit">
-                <div class="field">
+          <form method="POST" action="projects" @submit.prevent="onSubmit">
+              <div class="field">
                     <label class="label">Project Name</label>
                     <div class="control">
                       <input id="name" class="input" type="text" v-model="name" placeholder=""  @keydown="errors.clear('name')">

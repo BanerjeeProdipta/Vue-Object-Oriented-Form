@@ -64,10 +64,15 @@ const app = new Vue({
     methods: {
         onSubmit() {
             axios.post('/projects', this.$data)
-                .then(response => console.log(response))
+                .then(this.onSuccess)
                 .catch(error => this.errors.record(error.response.data.errors))
-        }
+        },
+        onSuccess(data) {
+            alert(data.message); // temporary
 
+            this.name = '';
+            this.description = '';
+        }
 
     }
 });

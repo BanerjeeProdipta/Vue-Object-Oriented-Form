@@ -49799,11 +49799,15 @@ var app = new Vue({
     onSubmit: function onSubmit() {
       var _this = this;
 
-      axios.post('/projects', this.$data).then(function (response) {
-        return console.log(response);
-      })["catch"](function (error) {
+      axios.post('/projects', this.$data).then(this.onSuccess)["catch"](function (error) {
         return _this.errors.record(error.response.data.errors);
       });
+    },
+    onSuccess: function onSuccess(data) {
+      alert(data.message); // temporary
+
+      this.name = '';
+      this.description = '';
     }
   }
 });
