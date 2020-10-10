@@ -1,8 +1,6 @@
 require('./bootstrap');
 
 window.Vue = require('vue');
-
-
 Vue.component('example-component', require('./components/ExampleComponent.vue').default);
 
 class Errors {
@@ -15,6 +13,7 @@ class Errors {
             return this.errors[field][0];
         }
     }
+
     record(errors) {
         this.errors = errors;
     }
@@ -22,6 +21,7 @@ class Errors {
     clear(field) {
         delete this.errors[field];
     }
+
     has(field) {
         return this.errors.hasOwnProperty(field);
     }
@@ -44,12 +44,11 @@ const app = new Vue({
                 .then(this.onSuccess)
                 .catch(error => this.errors.record(error.response.data.errors))
         },
-        onSuccess(data) {
-            alert(data.message); // temporary
 
+        onSuccess(response) {
+            alert(response.data.message); // temporary
             this.name = ''
             this.description = '';
         }
-
     }
 });

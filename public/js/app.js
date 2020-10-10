@@ -49721,33 +49721,10 @@ function _defineProperties(target, props) { for (var i = 0; i < props.length; i+
 
 function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _defineProperties(Constructor.prototype, protoProps); if (staticProps) _defineProperties(Constructor, staticProps); return Constructor; }
 
-/**
- * First we will load all of this project's JavaScript dependencies which
- * includes Vue and other libraries. It is a great starting point when
- * building robust, powerful web applications using Vue and Laravel.
- */
-var _require = __webpack_require__(/*! axios */ "./node_modules/axios/index.js"),
-    Axios = _require["default"];
-
 __webpack_require__(/*! ./bootstrap */ "./resources/js/bootstrap.js");
 
 window.Vue = __webpack_require__(/*! vue */ "./node_modules/vue/dist/vue.common.js");
-/**
- * The following block of code may be used to automatically register your
- * Vue components. It will recursively scan this directory for the Vue
- * components and automatically register them with their "basename".
- *
- * Eg. ./components/ExampleComponent.vue -> <example-component></example-component>
- */
-// const files = require.context('./', true, /\.vue$/i)
-// files.keys().map(key => Vue.component(key.split('/').pop().split('.')[0], files(key).default))
-
 Vue.component('example-component', __webpack_require__(/*! ./components/ExampleComponent.vue */ "./resources/js/components/ExampleComponent.vue")["default"]);
-/**
- * Next, we will create a fresh Vue application instance and attach it to
- * the page. Then, you may begin adding components to this application
- * or customize the JavaScript scaffolding to fit your unique needs.
- */
 
 var Errors = /*#__PURE__*/function () {
   function Errors() {
@@ -49803,8 +49780,8 @@ var app = new Vue({
         return _this.errors.record(error.response.data.errors);
       });
     },
-    onSuccess: function onSuccess(data) {
-      alert(data.message); // temporary
+    onSuccess: function onSuccess(response) {
+      alert(response.data.message); // temporary
 
       this.name = '';
       this.description = '';
@@ -49946,8 +49923,8 @@ __webpack_require__.r(__webpack_exports__);
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-__webpack_require__(/*! D:\Laravel\Vue\resources\js\app.js */"./resources/js/app.js");
-module.exports = __webpack_require__(/*! D:\Laravel\Vue\resources\sass\app.scss */"./resources/sass/app.scss");
+__webpack_require__(/*! E:\Vue-Object-Oriented-Form\resources\js\app.js */"./resources/js/app.js");
+module.exports = __webpack_require__(/*! E:\Vue-Object-Oriented-Form\resources\sass\app.scss */"./resources/sass/app.scss");
 
 
 /***/ })
