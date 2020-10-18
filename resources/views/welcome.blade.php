@@ -17,7 +17,6 @@
                     <div class="control">
                       <input id="name" class="input" type="text" v-model="name" placeholder=""  @keydown="errors.clear('name')">
                       <span class="help is-danger" v-if="errors.has('name')" v-text="errors.get('name')"></span>
-
                     </div>
                   </div>
                   
